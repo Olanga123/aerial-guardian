@@ -1,0 +1,28 @@
+detector:
+  model: yolov8n.pt
+  confidence: 0.25
+  iou: 0.45
+  imgsz: 640
+  target_class: 0
+  device: cpu
+
+sahi:
+  enabled: true
+  slice_height: 640
+  slice_width: 640
+  overlap_ratio: 0.2
+
+tracker:
+  track_thresh: 0.5
+  low_thresh: 0.1
+  match_thresh: 0.8
+  track_buffer: 30
+
+visualization:
+  tail_length: 30
+  show_fps: true
+  box_thickness: 2
+  font_scale: 0.6
+
+output:
+  path: outputs/result.mp4
